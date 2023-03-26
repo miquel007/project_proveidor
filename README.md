@@ -1,10 +1,10 @@
 # project_proveidor
 
-* Per inicialitzar el projecte primer has dejecutar la comanda per crear una DDBB
+* Per inicialitzar el projecte primer has d'ejecutar la comanda per crear una DDBB
 ```	
 	php bin/console doctrine:database:create
 ```
-* Per crear els caps en la DDBB, ejecuta la migració
+* Per crear els camps en la DDBB, ejecuta la migració
 ```
 	php bin/console doctrine:migrations:migrate
 ```
