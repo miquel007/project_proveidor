@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Proveidor{% endblock %}
+
+{% block body %}
+     <div class="container">
+        <h2 class="text-center mt-5 mb-3">Edit Proveidor</h2>
+        <div class="card">
+            <div class="card-header">
+                <a class="btn btn-outline-info float-right" href="{{ path('proveidor_index') }}"> 
+                    View All Proveidors
+                </a>
+            </div>
+            <div class="card-body">
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

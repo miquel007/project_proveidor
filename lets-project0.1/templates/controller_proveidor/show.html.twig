@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Proveidor{% endblock %}
+
+{% block body %}
+     <div class="container">
+        <h2 class="text-center mt-5 mb-3">Show Proveidor {{proveidor.id}}</h2>
+        <div class="card">
+            <div class="card-header">
+                <a class="btn btn-outline-info float-right" href="{{ path('proveidor_index') }}"> 
+                    View All Proveidors
+                </a>
+            </div>
+            <div class="card-body">
+                <b class="text-muted">Nom:</b>
+                <p>{{ proveidor.nom }}</p>
+                <b class="text-muted">Telefon:</b>
+                <p>{{ proveidor.telefon }}</p>
+                <b class="text-muted">Mail:</b>
+                <p>{{ proveidor.mail }}</p>
+                <b class="text-muted">Tipus:</b>
+                <p>{{ proveidor.tipus }}</p>  
+                <b class="text-muted">Actiu:</b>
+                {% if proveidor.actiu == 1 %}
+                    <p>True</p>
+                {% else %}
+                    <p>False</p>
+                {% endif %}
+                <b class="text-muted">Data Alta:</b>
+                <p>{{ proveidor.DataALta|date('d/m/Y') }}</p>
+                <b class="text-muted">Data Modificacio:</b>
+                <p>{{ proveidor.DataModificacio|date('d/m/Y') }}</p>                            
+            </div>
+        </div>
+    </div>
+{% endblock %}

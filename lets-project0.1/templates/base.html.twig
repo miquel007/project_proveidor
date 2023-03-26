@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}
+        </title> 
+        <link rel="stylesheet"
+        href = "https://bootswatch.com/5/cosmo/bootstrap.min.css">
+        {% block stylesheet %}{% endblock %}
+    </head>
+    <body>
+        {{ include('inc/navbar.html.twig') }}
+        <div class="container">
+            {% block body %}{% endblock %}     
+        </div>
+              
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

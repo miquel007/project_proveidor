@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Proveidor index{% endblock %}
+
+{% block body %}
+
+  <div class="card-body">
+    <table class="table table-bordered">
+        <tr>
+            <th>Nom</th>
+            <th>@</th>
+            <th>telefon</th>
+            <th width="240px">Action</th>
+        </tr>
+        {% for proveidor in proveidors %}
+        <tr>
+            <td>{{ proveidor.nom }}</td>
+            <td>{{ proveidor.mail }}</td>
+            <td>{{ proveidor.telefon }}</td>            
+            <td>
+              <form method="post" action="{{ path('proveidort_delete', {'id': proveidor.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">              
+                <a
+                    class="btn btn-outline-info"
+                    href="{{ path('proveidor_show', {'id': proveidor.id}) }}">
+                    Show
+                </a>
+                <a
+                    class="btn btn-outline-success"
+                    href="{{ path('proveidor_edit', {'id': proveidor.id}) }}">
+                    Edit
+                </a>    
+                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ proveidor.id) }}">
+                <button class="btn btn-outline-danger">Delete</button>
+              </form>                          
+          </td>
+        </tr>
+        {% endfor %}
+    </table>
+  </div>
+  
+{% endblock %}
