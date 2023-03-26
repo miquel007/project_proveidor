@@ -12,6 +12,5 @@
 ```
 	<VirtualHost *:80>    
 	    DocumentRoot "URLdelProjecte"
-	    ServerName lets-project0_1.test
 	</VirtualHost>
 ```
