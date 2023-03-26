@@ -10,7 +10,7 @@
 
 * Per navegar nomes utilitzant el 'localhost', anar a la carpeta 'C:\xampp\apache\conf\extra', obrir el doc 'httpd-vhosts.conf' i al final de fitxer escriure:
 
-<VirtualHost *:80>    
-    DocumentRoot "URLdelProjecte"
-    ServerName lets-project0_1.test
-</VirtualHost>
+	<VirtualHost *:80>    
+	    DocumentRoot "URLdelProjecte"
+	    ServerName lets-project0_1.test
+	</VirtualHost>
