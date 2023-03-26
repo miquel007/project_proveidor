@@ -1,15 +1,17 @@
 # project_proveidor
 
-# per inicialitzar el projecte primer has dejecutar la comanda per crear una DDBB
+*per inicialitzar el projecte primer has dejecutar la comanda per crear una DDBB
 	
-php bin/console doctrine:database:create
+	php bin/console doctrine:database:create
 
-# un cop creat la DDBB, cal ejecuta la migració
+*Per crear els caps en la DDBB, ejecuta la migració
 
-php bin/console doctrine:migrations:migrate
+	php bin/console doctrine:migrations:migrate
 
-/*documentacio del projecte
-* Nuestro departamento de contabilidad necesita poder introducir en nuestro sistema los datos de
-* los proveedores con los que trabajamos habitualmente, así que nos han solicitado una aplicación
-* que les permita hacerlo de forma rápida y sencilla.
-*/
+*Per navegar nomes utilitzant el 'localhost', anar a la carpeta 'C:\xampp\apache\conf\extra', obrir el doc 'httpd-vhosts.conf' i al final de fitxer escriure:
+
+
+<VirtualHost *:80>    
+    DocumentRoot "URLdelProjecte"
+    ServerName lets-project0_1.test
+</VirtualHost>
